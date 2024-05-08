@@ -63,6 +63,15 @@ function Dettaglio() {
               </div>
             )}
           </div>
+          <p> {data.language_desc}</p>
+          <h3>Traits and Characteristics: </h3>
+          <ul>
+            <li>
+              {data.traits.map((trait, index) => (
+                <li key={index}>{trait.name}</li>
+              ))}
+            </li>
+          </ul>
         </>
       ) : (
         <div className="spinner-border" role="status">

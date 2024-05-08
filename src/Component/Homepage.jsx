@@ -33,6 +33,8 @@ function Homepage() {
             <Col md={4}>
               <Card key={index} className="mb-3">
                 <Card.Body>
+                  <Card.Img src={`ImmaginiDnD/${race.name}.png`} variant="top" />
+
                   <Card.Title>{race.name}</Card.Title>
                   <Card.Text></Card.Text>
                   <Button onClick={() => clickHandler(race.index)} variant="outline-secondary">
