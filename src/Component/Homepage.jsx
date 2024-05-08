@@ -26,20 +26,18 @@ function Homepage() {
 
   return (
     <Container>
-      <h1 className="mb-5 mt-3">Razze</h1>
+      <h1 className="mb-5 mt-3">Select your Race</h1>
       <Row>
         {races.length > 0 ? (
           races.map((race, index) => (
             <Col md={4}>
-              <Card key={index} className="mb-3">
+              <Card key={index} className="mb-3 card">
                 <Card.Body>
                   <Card.Img src={`ImmaginiDnD/${race.name}.png`} variant="top" />
 
                   <Card.Title>{race.name}</Card.Title>
                   <Card.Text></Card.Text>
-                  <Button onClick={() => clickHandler(race.index)} variant="outline-secondary">
-                    Seleziona
-                  </Button>
+                  <button onClick={() => clickHandler(race.index)}>Seleziona</button>
                 </Card.Body>
               </Card>
             </Col>
