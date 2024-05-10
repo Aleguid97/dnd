@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 function MostriPag() {
   const [monsters, setMonsters] = useState([]);
   const navigate = useNavigate();
+
   const clickHandler = (index) => {
     navigate(`/DettaglioMostri/${index}`);
   };
@@ -13,12 +14,11 @@ function MostriPag() {
   useEffect(() => {
     async function fetchMonsters() {
       try {
-        // Effettua la prima chiamata API per ottenere i dati dei mostri
         const response = await fetch("https://www.dnd5eapi.co/api/monsters");
         const data = await response.json();
         setMonsters(data.results);
       } catch (error) {
-        console.error("Error fetching monsters:", error);
+        console.error(error);
       }
     }
 
@@ -34,16 +34,13 @@ function MostriPag() {
             <Card className="mb-3 card">
               <Card.Body>
                 <Card.Img
-                  src={`https://www.dnd5eapi.co/api/images/monsters/${monster.index}.png`}
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "fallback-image-url"; // URL di fallback se l'immagine non è disponibile
-                  }}
+                  src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ058aWRWCbZEs2lwsx6h1ycf0TE65FeyPDUg&s`}
                   variant="top"
                 />
+
                 <Card.Title>{monster.name}</Card.Title>
                 <Card.Text></Card.Text>
-                <button onClick={() => clickHandler(monster.index)}>Seleziona</button>
+                <button onClick={() => clickHandler(index)}>Seleziona</button>
               </Card.Body>
             </Card>
           </Col>
