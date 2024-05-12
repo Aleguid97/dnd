@@ -33,14 +33,10 @@ function MostriPag() {
           <Col md={4} key={index}>
             <Card className="mb-3 card">
               <Card.Body>
-                <Card.Img
-                  src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ058aWRWCbZEs2lwsx6h1ycf0TE65FeyPDUg&s`}
-                  variant="top"
-                />
-
+                <Card.Img src="ImmaginiDnD\armatura-animata.webp" variant="top" />
                 <Card.Title>{monster.name}</Card.Title>
                 <Card.Text></Card.Text>
-                <button onClick={() => clickHandler(index)}>Seleziona</button>
+                <button onClick={() => clickHandler(monster.index)}>Seleziona</button>
               </Card.Body>
             </Card>
           </Col>
