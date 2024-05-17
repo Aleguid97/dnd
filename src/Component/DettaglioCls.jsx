@@ -54,7 +54,7 @@ function DettaglioCls() {
                 {choice.desc}
                 <ul>
                   {choice.from.options.map((option, idx) => (
-                    <li key={idx}>{option.item.name}</li>
+                    <li key={idx}>{option.item && option.item.name ? option.item.name : "N/A"}</li>
                   ))}
                 </ul>
               </li>
