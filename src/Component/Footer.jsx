@@ -6,7 +6,7 @@ function Footer() {
     <Card className="text-center footer">
       <Card.Body>
         <Card.Title>Roll the dice ©</Card.Title>
-        <Card.Text>Nerd è bello e rimorchia pure</Card.Text>
+        <Card.Text>Nerd è bello e rimorchia pure.</Card.Text>
         <Card.Text>Applicazione realizzata da A&G srl</Card.Text>
         <div className="icon-container">
           <a href="https://github.com/Aleguid97" target="_blank" rel="noopener noreferrer">
