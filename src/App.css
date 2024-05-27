@@ -23,6 +23,11 @@ button:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .race-details {
   background-color: #f9f9f9;
   padding: 20px;
@@ -114,4 +119,23 @@ button:hover {
     color: white;
     text-decoration: none;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between the icons */
+  margin-top: 10px; /* Optional: add some margin on top */
+}
+
+.icon {
+  font-size: 2rem; /* Increase the icon size */
 }

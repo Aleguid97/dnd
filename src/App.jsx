@@ -10,6 +10,7 @@ import Dettaglio from "./Component/Dettaglio";
 import DettaglioCls from "./Component/DettaglioCls";
 import MostriPag from "./Component/MostriPag";
 import DettaglioMostri from "./Component/DettaglioMostri";
+import Footer from "./Component/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/MostriPag" element={<MostriPag />} />
         <Route path="/DettaglioMostri/:index" element={<DettaglioMostri />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
