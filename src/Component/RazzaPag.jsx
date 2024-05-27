@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Button, Container, Col } from "react-bootstrap";
+import { Card, Container, Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -30,8 +30,8 @@ function RazzaPag() {
       <Row>
         {races.length > 0 ? (
           races.map((race, index) => (
-            <Col md={4}>
-              <Card key={index} className="mb-3 card">
+            <Col md={4} key={index}>
+              <Card className="mb-3 card">
                 <Card.Body>
                   <Card.Img src={`ImmaginiDnD/Razze/${race.name}.png`} variant="top" />
 

@@ -30,8 +30,8 @@ function ClassePag() {
       <Row>
         {classes.length > 0 ? (
           classes.map((cls, index) => (
-            <Col md={4}>
-              <Card key={index} className="mb-3 card">
+            <Col md={4} key={index}>
+              <Card className="mb-3 card">
                 <Card.Body>
                   <Card.Img src={`ImmaginiDnD/Classi/${cls.name}.png`} variant="top" />
 

@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from "react";
 import { Container, Card, Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 function Homepage() {
+  const navigate = useNavigate();
+  const clickHandler = (link) => {
+    navigate(`${link}`);
+  };
+
   const contents = [
     { Nome: "Races", Link: "/RazzaPag", Descrizione: "Choose your race but don't be racist! maybe..." },
     { Nome: "Classes", Link: "/ClassePag", Descrizione: "Choose your class and start your adventure!" },
@@ -30,15 +34,13 @@ function Homepage() {
       <div>
         <Row>
           {contents.map((content, index) => (
-            <Col md={4}>
-              <Card key={index} className="mb-3 rounded-4">
+            <Col md={4} key={index}>
+              <Card className="mb-3 rounded-4">
                 <Card.Body>
                   <Card.Title>{content.Nome}</Card.Title>
                   <Card.Text>{content.Descrizione ? content.Descrizione : "No description available"}</Card.Text>
-                  <button>
-                    <Card.Link className="link text-white" href={content.Link}>
-                      Choose fast or die!{" "}
-                    </Card.Link>
+                  <button className="link text-white" onClick={() => clickHandler(content.Link)}>
+                    Choose fast or die!{" "}
                   </button>
                 </Card.Body>
               </Card>
